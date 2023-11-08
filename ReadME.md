@@ -1,4 +1,3 @@
-https://segmentfault.com/a/1190000014641724
 #手撸虚拟DOM
 ###设计
 #采用跟React、PReact类似的思想结构
