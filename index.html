@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>VDOM</title>
+    <style>
+      body {
+        margin: 0;
+        font-size: 24;
+        font-family: sans-serif;
+      }
+      .list {
+        text-decoration: none;
+      }
+      .list .main {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="compiled.js"></script>
+    <div id="app"></div>
+
+    <script>
+      function tick(el, count) {
+        const patches = diff(view(count), view(count + 1))
+        patch(el, patches)
+
+        if(count > 0) return
+        console.log(view(count + 1));
+        setTimeout(() => tick(el, count + 1), 1000)
+      }
+
+      function render(el) {
+        const initialCount = 0;
+        el.appendChild(createElement(view(initialCount)));
+
+        // 模拟用户更新数据
+        setTimeout(() => tick(el, initialCount), 1000);
+      }
+
+      var app = document.getElementById("app");
+      render(app);
+    </script>
+  </body>
+</html>
