@@ -1,11 +1,9 @@
-#手撸虚拟DOM
-###设计
-#采用跟React、PReact类似的思想结构
-# 1. 使用JSX来编写组件
-    # 1.1 利用babel将JSX编译成JS（暂且称为hyperscript:HScript）
-# 2. 将HScript转换成我们的VDOM
-# 3. 将VDOM渲染到页面 形成真实DOM
-# 5. 手动更新数据并触发更新输入操作
-# 6. 重复步骤2、步骤3，得到最新VDOM
-# 7. 利用diff算法比较新旧VDOM，得到需要更新DOM的patchs
-# 8. 利用patchs批量更新DOM
+# 一个简单的虚拟DOM实现 (类React、PReacct机制)
+学习食用
+# 设计
+![这是图片](/blueprints.jpg "Magic Gardens")
+### 项目启动
+### yarn compile / npm run compile
+生成compile.js
+### 访问index.html
+即可观察页面渲染变化
