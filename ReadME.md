@@ -1,4 +1,4 @@
-# 一个简单的虚拟DOM实现 (类React、PReacct机制)
+# 一个简单的虚拟DOM实现 (类React、PReact机制)
 学习食用
 # 设计
 ![这是图片](/blueprints.jpg "Magic Gardens")
